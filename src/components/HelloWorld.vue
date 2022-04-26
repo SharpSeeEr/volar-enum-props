@@ -1,5 +1,5 @@
 <template>
-  <h1>{{ msg }}</h1>
+  <h1>{{ msg }} {{ recipient }}</h1>
 
   <p>
     Recommended IDE setup:
@@ -24,8 +24,9 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue'
+import { Recipient } from '../types';
 
-defineProps<{ msg: string }>()
+defineProps<{ msg: string, recipient: Recipient }>()
 
 const count = ref(0)
 </script>
